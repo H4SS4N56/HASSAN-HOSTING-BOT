@@ -799,7 +799,7 @@ async def handle_document(message: types.Message):
     if bot_locked and user_id not in admin_ids:
         await message.answer("🔒 Bot is currently locked!")
         return
-      current_files = len(user_files.get(user_id, []))
+    current_files = len(user_files.get(user_id, []))
     limit = get_user_file_limit(user_id)
     
     if current_files >= limit:

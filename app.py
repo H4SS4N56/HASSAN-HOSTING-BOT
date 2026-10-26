@@ -1690,8 +1690,7 @@ async def cmd_add_admin(message: types.Message):
     if message.from_user.id not in admin_ids:
         await message.answer("❌ Permission denied!")
         return
-
-   try:
+    try:
         args = message.text.split()
         if len(args) != 2:
             await message.answer("Usage: /addadmin USER_ID")
